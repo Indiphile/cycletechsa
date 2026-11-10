@@ -104,6 +104,7 @@ function cts_icon( $name ) {
 		'menu'  => '<path d="M4 7h16M4 12h16M4 17h16"/>',
 		'close' => '<path d="M6 6l12 12M18 6L6 18"/>',
 		'cart'  => '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2l2.6 11.2a1.5 1.5 0 0 0 1.5 1.1h8.3a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/>',
+		'user'  => '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
 	);
 	if ( ! isset( $paths[ $name ] ) ) {
 		return '';
@@ -129,6 +130,7 @@ function cts_arcs( $class ) {
 function cts_primary_menu_fallback() {
 	$items = array(
 		'services' => __( 'Services', 'cycletechsa' ),
+		'apps'     => __( 'Apps', 'cycletechsa' ),
 		'ai'       => __( 'AI', 'cycletechsa' ),
 		'packages' => __( 'Packages', 'cycletechsa' ),
 	);

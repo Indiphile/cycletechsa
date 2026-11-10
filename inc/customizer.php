@@ -26,9 +26,9 @@ function cts_customizer_defaults() {
 
 		// Hero.
 		'hero_eyebrow'    => 'Digital agency · South Africa',
-		'hero_title'      => 'Websites, AI tools and brands that keep your business',
+		'hero_title'      => 'Websites, apps, AI tools and brands that keep your business',
 		'hero_highlight'  => 'moving',
-		'hero_lead'       => 'We design, build and look after the digital side of South African businesses — from a first website to AI automations that take the admin off your team.',
+		'hero_lead'       => 'We design, build and look after the digital side of South African businesses — from a first website and your own ordering app to AI automations that take the admin off your team.',
 		'hero_video'      => true,
 
 		// AI band.

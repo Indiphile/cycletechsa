@@ -44,7 +44,7 @@
 	}
 
 	// Background videos: respect reduced motion, only play while on screen.
-	var videos = document.querySelectorAll('video.cts-bg-video');
+	var videos = document.querySelectorAll('video.cts-bg-video, video.wp-block-cover__video-background');
 	if (!videos.length) {
 		return;
 	}

@@ -42,6 +42,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<a class="cts-btn cts-btn--primary cts-btn--sm" href="<?php echo esc_url( cts_cta_url() ); ?>"><?php esc_html_e( 'Start a project', 'cycletechsa' ); ?></a>
 			</nav>
 
+			<?php if ( function_exists( 'wc_get_page_permalink' ) ) : ?>
+				<a class="header-cart header-account" href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">
+					<?php echo cts_icon( 'user' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static SVG. ?>
+					<span class="screen-reader-text"><?php is_user_logged_in() ? esc_html_e( 'My account', 'cycletechsa' ) : esc_html_e( 'Log in', 'cycletechsa' ); ?></span>
+				</a>
+			<?php endif; ?>
+
 			<?php if ( function_exists( 'WC' ) && WC()->cart ) : ?>
 				<?php $cts_count = WC()->cart->get_cart_contents_count(); ?>
 				<a class="header-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>">

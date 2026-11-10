@@ -1,0 +1,215 @@
+/*
+ * CycleTechSA — styles for the block sections (patterns) and the brand block styles.
+ * Loaded on the front end and inside the block editor, so editing looks like the site.
+ */
+
+/* ---------- Page wrapper for the full-width block template ---------- */
+.cts-blocks > :first-child { margin-top: 0; }
+.cts-blocks > .alignfull { margin-top: 0; margin-bottom: 0; }
+
+/* ---------- Brand block styles (Styles panel in the editor) ---------- */
+
+/* Eyebrow label (paragraph) */
+.is-style-cts-eyebrow {
+	font-size: 12px !important;
+	line-height: 16px !important;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--blue-deep);
+}
+.has-dark-background-color .is-style-cts-eyebrow,
+.wp-block-cover.is-dark .is-style-cts-eyebrow,
+.is-style-cts-card-featured .is-style-cts-eyebrow { color: var(--wp--preset--color--tan); }
+
+/* Badge (paragraph) */
+.is-style-cts-badge {
+	display: inline-block;
+	margin: 0;
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: var(--wp--preset--color--orange);
+	color: var(--wp--preset--color--dark) !important;
+	font-size: 12px !important;
+	line-height: 16px !important;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Step number (paragraph) */
+.is-style-cts-step {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	margin: 0;
+	border-radius: 999px;
+	background: var(--wp--preset--color--sky);
+	color: var(--wp--preset--color--dark) !important;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 600;
+	font-size: 22px !important;
+	line-height: 1 !important;
+}
+
+/* Display light heading */
+.wp-block-heading.is-style-cts-light-heading {
+	font-weight: 300;
+	font-size: clamp(32px, 3.8vw, 52px);
+	line-height: 1.12;
+}
+
+/* Checklist (list) */
+.is-style-cts-checklist { list-style: none; padding-left: 0; margin-left: 0; }
+.is-style-cts-checklist li { position: relative; padding-left: 36px; margin: 0 0 14px; }
+.is-style-cts-checklist li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 2px;
+	width: 22px;
+	height: 22px;
+	background-color: var(--wp--preset--color--blue);
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.has-dark-background-color .is-style-cts-checklist li::before,
+.wp-block-cover.is-dark .is-style-cts-checklist li::before { background-color: var(--wp--preset--color--sky); }
+
+/* Cards (group, media & text) */
+.is-style-cts-card {
+	background: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--dark);
+	border: 1px solid var(--wp--preset--color--light);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.is-style-cts-card-featured {
+	background: var(--wp--preset--color--dark);
+	color: var(--wp--preset--color--white);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.is-style-cts-card-featured .wp-block-heading { color: var(--wp--preset--color--white); }
+.is-style-cts-card > .cts-card__body { flex: 1 1 auto; align-self: stretch; }
+.cts-card__media { margin: 0 !important; width: 100%; flex: 0 0 auto !important; }
+.cts-card__media img { border-radius: 0 !important; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.cts-card__link { margin-top: auto !important; font-weight: 600; }
+.cts-card__link a { text-decoration: none; }
+.cts-card__link a:hover { text-decoration: underline; }
+
+/* Prices */
+.cts-price {
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 500;
+	font-size: 36px !important;
+	line-height: 42px !important;
+	margin: 0;
+}
+.cts-price__period { font-family: var(--wp--preset--font-family--body); font-size: 14px; font-weight: 400; color: var(--wp--preset--color--muted); }
+.cts-quiet { color: var(--wp--preset--color--muted); }
+.is-style-cts-card-featured .cts-price__period,
+.is-style-cts-card-featured .cts-quiet,
+.is-style-cts-card-featured .has-muted-color { color: var(--wp--preset--color--light) !important; }
+.cts-push-bottom { margin-top: auto !important; }
+.cts-push-bottom .wp-block-button { width: 100%; }
+.cts-push-bottom .wp-block-button__link { width: 100%; }
+
+/* ---------- Button styles ---------- */
+.wp-block-button__link { transition: background-color .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.wp-block-button__link:hover { transform: translateY(-1px); }
+
+.wp-block-button.is-style-cts-outline .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--dark);
+	box-shadow: inset 0 0 0 1.5px var(--wp--preset--color--dark);
+}
+.wp-block-button.is-style-cts-outline .wp-block-button__link:hover { background: var(--wp--preset--color--dark); color: var(--wp--preset--color--white); }
+
+.wp-block-button.is-style-cts-outline-light .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--white);
+	font-weight: 500;
+	box-shadow: inset 0 0 0 1.5px var(--wp--preset--color--light);
+}
+.wp-block-button.is-style-cts-outline-light .wp-block-button__link:hover { background: var(--wp--preset--color--white); color: var(--wp--preset--color--dark); }
+
+.wp-block-button.is-style-cts-dark .wp-block-button__link { background: var(--wp--preset--color--dark); color: var(--wp--preset--color--white); }
+.wp-block-button.is-style-cts-dark .wp-block-button__link:hover { background: #2c2a31; color: var(--wp--preset--color--white); }
+
+.wp-block-button.is-style-cts-orange .wp-block-button__link { background: var(--wp--preset--color--orange); color: var(--wp--preset--color--dark); }
+.wp-block-button.is-style-cts-orange .wp-block-button__link:hover { background: #ffa36b; color: var(--wp--preset--color--dark); }
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-button__link:hover { transform: none; }
+}
+
+/* ---------- Sections ---------- */
+
+/* Hero: brand crescents on the right, behind the text */
+.cts-hero { overflow: hidden; }
+.cts-hero::after {
+	content: "";
+	position: absolute;
+	right: -60px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 520px;
+	height: 520px;
+	background: url("../img/arcs.svg") center / contain no-repeat;
+	opacity: 0.9;
+	pointer-events: none;
+	z-index: 1;
+}
+.cts-hero .wp-block-cover__inner-container { z-index: 2; }
+@media (max-width: 720px) {
+	.cts-hero::after { width: 340px; height: 340px; right: -160px; opacity: 0.45; }
+}
+
+/* Mobile apps band */
+.cts-apps__phone { margin-top: 0 !important; margin-bottom: 0 !important; }
+.cts-apps__phone img { border-radius: 0 !important; }
+@media (max-width: 781px) {
+	.cts-apps__phone img { width: 280px !important; }
+}
+
+/* AI band: fade the video more on phones so text stays readable */
+@media (max-width: 720px) {
+	.cts-ai .wp-block-cover__background { background: rgba(255, 255, 255, 0.88) !important; }
+}
+
+/* Process band */
+.cts-process { border-top: 1px solid var(--wp--preset--color--light); border-bottom: 1px solid var(--wp--preset--color--light); }
+
+/* Shop teaser (media & text card) */
+.cts-shop-teaser { min-height: 320px; }
+.cts-shop-teaser .wp-block-media-text__content { padding: clamp(28px, 4vw, 48px) !important; }
+.cts-shop-teaser .wp-block-media-text__content > * + * { margin-top: 16px; }
+.cts-shop-teaser .wp-block-media-text__media img { border-radius: 0 !important; }
+
+/* Contact band: crescents on the left */
+.cts-contact { position: relative; overflow: hidden; }
+.cts-contact::before {
+	content: "";
+	position: absolute;
+	left: -120px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 420px;
+	height: 420px;
+	background: url("../img/arcs.svg") center / contain no-repeat;
+	opacity: 0.55;
+	pointer-events: none;
+}
+.cts-contact > * { position: relative; }
+@media (max-width: 781px) {
+	.cts-contact .wp-block-buttons { justify-content: flex-start !important; }
+}
+
+/* Background videos: respect reduced motion (poster/overlay carries the look) */
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-cover__video-background { display: none; }
+	.cts-hero { background: var(--wp--preset--color--dark); }
+}

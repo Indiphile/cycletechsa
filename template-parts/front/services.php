@@ -19,6 +19,14 @@ $cts_services = array(
 		'cta'   => __( 'Talk to us about a site', 'cycletechsa' ),
 	),
 	array(
+		'title' => __( 'Mobile apps', 'cycletechsa' ),
+		'text'  => __( 'Your own Android and iOS ordering app, with your brand, menu and online payments — no platform commission on every order.', 'cycletechsa' ),
+		'img'   => 'app-card.jpg',
+		'alt'   => __( 'Phone showing a branded ordering app', 'cycletechsa' ),
+		'link'  => cts_section_url( 'apps' ),
+		'cta'   => __( 'See how it works', 'cycletechsa' ),
+	),
+	array(
 		'title' => __( 'AI-powered services', 'cycletechsa' ),
 		'text'  => __( "Assistants, document workflows and automations that take repetitive admin off your team's plate.", 'cycletechsa' ),
 		'img'   => 'photo-code-screen.jpg',
@@ -48,7 +56,7 @@ $cts_services = array(
 	<div class="cts-container">
 		<div class="cts-section-head">
 			<p class="cts-eyebrow"><?php esc_html_e( 'What we do', 'cycletechsa' ); ?></p>
-			<h2 class="cts-h2"><?php esc_html_e( 'Four services, one team that knows your business.', 'cycletechsa' ); ?></h2>
+			<h2 class="cts-h2"><?php esc_html_e( 'Five services, one team that knows your business.', 'cycletechsa' ); ?></h2>
 		</div>
 		<div class="cts-grid">
 			<?php foreach ( $cts_services as $cts_s ) : ?>

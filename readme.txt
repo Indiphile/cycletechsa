@@ -1,6 +1,6 @@
 === CycleTechSA ===
 Contributors: cycletechsa
-Requires at least: 6.4
+Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
 WooCommerce tested up to: 9.8
@@ -17,9 +17,28 @@ Custom theme for cycletechsa.co.za: agency homepage + WooCommerce STEM shop.
 3. Preview first: on the theme card click "Live Preview", check the homepage, then Activate.
 4. Settings › Permalinks › Save (refreshes URLs once).
 
-== Fill in the homepage ==
+== Make the homepage editable (recommended) ==
+
+After activating (or updating) the theme, go to Appearance › Themes or the Dashboard and
+click "Create editable homepage". This creates a new page called "Home" built from the
+CycleTechSA sections and sets it as your homepage. Your old homepage stays as a page;
+switch back any time in Settings › Reading.
+
+Then edit Pages › Home in the block editor:
+- Click any heading, text, button or image to change it; use the block toolbar to change links.
+- Move sections up/down, duplicate or delete them (List View, top-left).
+- Add sections: + › Patterns › "CycleTechSA sections" (Hero, Services, Mobile apps, AI,
+  Packages, How we work, Shop, Contact). They work on any page.
+- Brand styles live in each block's Styles panel: Eyebrow label, Badge, Step number,
+  Display light heading, Checklist, Card / Card (featured), and button styles
+  (Outline, Outline on dark, Charcoal, Orange).
+- Colours and fonts in the editor are limited to the brand palette (theme.json).
+- For other landing pages, choose the page template "Full width (block sections)".
+
+== Settings that still live in the Customizer ==
 
 Appearance › Customize › CycleTechSA
+(Used by the built-in homepage shown before you create the editable one, and for the footer city.)
 - Contact details: email, WhatsApp number, city, reply time. Buttons hide until filled.
 - Packages: names, prices, included items (one per line). Empty name = tier hidden.
   Untick "Show the packages section" to hide it until prices are final.
@@ -76,6 +95,15 @@ front-page.php + template-parts/front/*.php   homepage sections
 page.php, single.php, index.php, 404.php, woocommerce.php   inner pages
 
 == Changelog ==
+
+= 1.1.0 =
+* Editable homepage: every section is now a block pattern, edited in the block editor.
+* theme.json: brand colours, fonts, button style and spacing in the editor.
+* New "Mobile apps" service and section (branded Android/iOS ordering apps).
+* Account icon in the header next to the cart.
+* Shop: product names in the body font; loop "Add to cart/basket" buttons forced to the
+  brand style so plugin or old "Additional CSS" colours can't override them.
+* Requires WordPress 6.6+.
 
 = 1.0.0 =
 * First release from the CycleTechSA design system.
